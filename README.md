@@ -26,7 +26,7 @@
 
 # 2021-09-06
 
-## 컴포넌트 만들기
+## 컴포넌트와 props
 
 ```
 class Subject extends Component {
@@ -45,6 +45,7 @@ class App extends Component {
     return (
       <div className="App">
           <Subject title="WEB" sub="world wide web!"></Subject>
+          <Subject title="APP" sub="apppppp"></Subject>
           <TOC></TOC>
           <Content title="HTML" desc="HTML is HyperText MarkUp"></Content>
       </div>
@@ -52,5 +53,19 @@ class App extends Component {
   }
 }
 ```
-       
+
+ 다음과 같은 방식으로 props를 사용한다.
+ props는 부모 컴포넌트로부터 자식 컴포넌트로 전달된 데이터를 의미한다.
+ 원하는 값을 입력하여 한 컴포넌트를 여러가지 출력으로 사용 가능.
+ 
+ #### props는 state와 달리 read-only 라는 것에 주의
+ 
+ ## react-developer tools
+ 
+ 크롬 확장 프로그램인 react-developer tools를 이용하여 아래와 같은 화면을 볼 수 있다.
+ 
+ ![image](https://user-images.githubusercontent.com/90030675/132222137-1f0b3047-2adc-4da0-aaab-06fc81b64bed.png)
+
+ 
+ 
 
