@@ -28,6 +28,7 @@
 
 ## 컴포넌트와 props
 
+
 ```
 class Subject extends Component {
   render() {
@@ -60,7 +61,10 @@ class App extends Component {
  
  #### props는 state와 달리 read-only 라는 것에 주의
  
+
+ 
  ## react-developer tools
+ 
  
  크롬 확장 프로그램인 react-developer tools를 이용하여 아래와 같은 화면을 볼 수 있다.
  
