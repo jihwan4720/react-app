@@ -17,6 +17,19 @@
 3. 강의를 따라하기 위해 기본적으로 제공되는 src/ 폴더의 app.css와 index.css 삭제
 
 
+4. 빌드 할 때는 npm run build 명령어로 build 폴더 생성
+
+  -create-react-app이 프로덕션 환경에서 사용되는 앱을 만들기 위해서 불필요하게 용량을 차지하는 정보들을 삭제해서 만듬
+  
+5. npx serve -s build 로 build 디렉토리를 Document Root로 하여 서버를 실행
+
+
+# 2021-09-06
+
+## 컴포넌트 만들기
+
+
+
 
        
 
