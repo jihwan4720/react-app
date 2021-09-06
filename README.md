@@ -61,6 +61,7 @@ class App extends Component {
  
  #### props는 state와 달리 read-only 라는 것에 주의
  
+ 
 
  
  ## react-developer tools
@@ -69,6 +70,15 @@ class App extends Component {
  크롬 확장 프로그램인 react-developer tools를 이용하여 아래와 같은 화면을 볼 수 있다.
  
  ![image](https://user-images.githubusercontent.com/90030675/132222137-1f0b3047-2adc-4da0-aaab-06fc81b64bed.png)
+ 
+ 
+ ## Component를 파일로 분리하기
+ 
+ 
+![image](https://user-images.githubusercontent.com/90030675/132224366-e8b31ca6-fe6e-4a34-b2f8-85fb9e449b0f.png)
+
+
+각각의 컴포넌트들을 파일로 분리하고 App.js에 분리시킨 파일들을 import 하여 사용 가능.
 
  
  
