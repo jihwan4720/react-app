@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# 2021-09-04
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 개발 환경 구축하기
 
-## Available Scripts
+1. Node.js 설치
+  
+   JavaScript로 브라우저 밖에서 서버를 구축하는 등의 코드를 실행 할 수 있게 해주는 런타임 환경. (npm도 같이 설치가 됨)
+  
+2. Create React App
 
-In the project directory, you can run:
+   my-app 이라는 리액트 프로젝트 생성하고 해당 디렉토리로 이동 후 실행시키면 기본적으로 localhost:3000에서 프로젝트를 볼 수 있음
 
-### `npm start`
+ ![image](https://user-images.githubusercontent.com/90030675/132092354-a8cf5820-ba97-40d9-8a18-521101edf4fd.png)
+ 
+   
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. 강의를 따라하기 위해 기본적으로 제공되는 src/ 폴더의 app.css와 index.css 삭제
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+4. 빌드 할 때는 npm run build 명령어로 build 폴더 생성
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  -create-react-app이 프로덕션 환경에서 사용되는 앱을 만들기 위해서 불필요하게 용량을 차지하는 정보들을 삭제해서 만듬
+  
+5. npx serve -s build 로 build 디렉토리를 Document Root로 하여 서버를 실행
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 2021-09-06
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 컴포넌트와 props
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+```
+class Subject extends Component {
+  render() {
+    return(
+      <header>
+        <h1>{this.props.title}</h1>
+        {this.props.sub}
+      </header>
+    );
+  }
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+          <Subject title="WEB" sub="world wide web!"></Subject>
+          <Subject title="APP" sub="apppppp"></Subject>
+          <TOC></TOC>
+          <Content title="HTML" desc="HTML is HyperText MarkUp"></Content>
+      </div>
+    );
+  }
+}
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ 다음과 같은 방식으로 props를 사용한다.
+ props는 부모 컴포넌트로부터 자식 컴포넌트로 전달된 데이터를 의미한다.
+ 원하는 값을 입력하여 한 컴포넌트를 여러가지 출력으로 사용 가능.
+ 
+ #### props는 state와 달리 read-only 라는 것에 주의
+ 
+ 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ 
+ ## react-developer tools
+ 
+ 
+ 크롬 확장 프로그램인 react-developer tools를 이용하여 아래와 같은 화면을 볼 수 있다.
+ 
+ ![image](https://user-images.githubusercontent.com/90030675/132222137-1f0b3047-2adc-4da0-aaab-06fc81b64bed.png)
+ 
+ 
+ ## Component를 파일로 분리하기
+ 
+ 
+![image](https://user-images.githubusercontent.com/90030675/132224366-e8b31ca6-fe6e-4a34-b2f8-85fb9e449b0f.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+각각의 컴포넌트들을 파일로 분리하고 App.js에 분리시킨 파일들을 import 하여 사용 가능.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ 
+ 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
