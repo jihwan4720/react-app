@@ -28,7 +28,7 @@
 
 ## 컴포넌트 만들기
 
-'''
+```
 class Subject extends Component {
   render() {
     return(
@@ -51,6 +51,6 @@ class App extends Component {
     );
   }
 }
-'''
+```
        
 
