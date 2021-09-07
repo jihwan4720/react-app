@@ -80,6 +80,26 @@ class App extends Component {
 
 각각의 컴포넌트들을 파일로 분리하고 App.js에 분리시킨 파일들을 import 하여 사용 가능.
 
- 
+
+# 2021-09-07
+
+## State
+
+state는 컴포넌트 자기 자신이 가지고 있는 값으로 변화가 필요할 경우 setState()로 값 변경 가능.
+
+## constructor()
+
+render() 보다 먼저 실행이 되면서 해당 컴포넌트를 초기화 시켜주는 부분
+
+## key
+
+여러개의 엘리먼트를 자동으로 생성하는 경우 아래와 같은 에러가 발생 하므로 각각의 항목들은 key라고 하는 props를 가지고 있어야 함.
+애플리케이션에서 사용하는것이라기 보단 리액트 내부적으로 필요한 설정
+
+![image](https://user-images.githubusercontent.com/90030675/132269317-c795eb2e-648a-4591-ae1b-0542f490cc4d.png)
+
+![image](https://user-images.githubusercontent.com/90030675/132269469-8d71df8b-1869-474c-87d2-d2f2779524fe.png)
+
+
  
 
