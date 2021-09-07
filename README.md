@@ -55,16 +55,17 @@ class App extends Component {
 }
 ```
 
+ #### props는 state와 달리 read-only 라는 것에 주의
+
  다음과 같은 방식으로 props를 사용한다.
  props는 부모 컴포넌트로부터 자식 컴포넌트로 전달된 데이터를 의미한다.
  원하는 값을 입력하여 한 컴포넌트를 여러가지 출력으로 사용 가능.
  
- #### props는 state와 달리 read-only 라는 것에 주의
  
  
 
  
- ## react-developer tools
+ ## React developer tools
  
  
  크롬 확장 프로그램인 react-developer tools를 이용하여 아래와 같은 화면을 볼 수 있다.
@@ -80,6 +81,46 @@ class App extends Component {
 
 각각의 컴포넌트들을 파일로 분리하고 App.js에 분리시킨 파일들을 import 하여 사용 가능.
 
- 
+
+# 2021-09-07
+
+## State
+
+state는 컴포넌트 자기 자신이 가지고 있는 값으로 변화가 필요할 경우 setState()로 값 변경 가능.
+컴포넌트가 생성이 끝난 다음 동적으로 state의 값을 바꿀 때는 setState를 사용해야한다.
+
+## constructor()
+
+render() 보다 먼저 실행이 되면서 해당 컴포넌트를 초기화 시켜주는 부분
+
+## key
+
+여러개의 엘리먼트를 자동으로 생성하는 경우 아래와 같은 에러가 발생 하므로 각각의 항목들은 key라고 하는 props를 가지고 있어야 함.
+애플리케이션에서 사용하는것이라기 보단 리액트 내부적으로 필요한 설정
+
+![image](https://user-images.githubusercontent.com/90030675/132269317-c795eb2e-648a-4591-ae1b-0542f490cc4d.png)
+
+![image](https://user-images.githubusercontent.com/90030675/132269469-8d71df8b-1869-474c-87d2-d2f2779524fe.png)
+
+
+## 이벤트
+
+![image](https://user-images.githubusercontent.com/90030675/132283598-2819c327-9d2d-4d85-b134-3cb196f2adab.png)
+
+
+함수에 첫번째 매개변수에 값으로 event 객체를 주입 한다.
+e.preventDefault() 함수는 이벤트가 발생한 태그의 기본적인 동작을 막는다. 따라서 위 코드에서 <a>태그 클릭 시에도 새로 고침 없이 동작 가능하다
+  
+event가 호출 됐을 때 실행되는 함수 안에서는 this가 컴포넌트 자기 자신을 가리키지 않고 아무런 값도 세팅 되어 있지 않다.
+  
+함수가 끝난 직후에 .bind(this)를 추가 해줘야 this가 컴포넌트를 가리킨다. 
+  
+bind의 두번째 인자는 function의 첫번째 매개변수의 값으로 넣어줌
+  
+![image](https://user-images.githubusercontent.com/90030675/132291190-38a48aca-a6a8-4cbe-9d00-ee2d393c7ae0.png)
+
+### 상위 컴포넌트가 하위 컴포넌트에 데이터를 전달 할 때는 props를 쓰고
+### 하위 컴포넌트가 상위 컴포넌트에 
+
  
 
