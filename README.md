@@ -55,16 +55,17 @@ class App extends Component {
 }
 ```
 
+ #### props는 state와 달리 read-only 라는 것에 주의
+
  다음과 같은 방식으로 props를 사용한다.
  props는 부모 컴포넌트로부터 자식 컴포넌트로 전달된 데이터를 의미한다.
  원하는 값을 입력하여 한 컴포넌트를 여러가지 출력으로 사용 가능.
  
- #### props는 state와 달리 read-only 라는 것에 주의
  
  
 
  
- ## react-developer tools
+ ## React developer tools
  
  
  크롬 확장 프로그램인 react-developer tools를 이용하여 아래와 같은 화면을 볼 수 있다.
