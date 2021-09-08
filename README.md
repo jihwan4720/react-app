@@ -120,7 +120,12 @@ bind의 두번째 인자는 function의 첫번째 매개변수의 값으로 넣�
 ![image](https://user-images.githubusercontent.com/90030675/132291190-38a48aca-a6a8-4cbe-9d00-ee2d393c7ae0.png)
 
 ### 상위 컴포넌트가 하위 컴포넌트에 데이터를 전달 할 때는 props를 쓰고
-### 하위 컴포넌트가 상위 컴포넌트에 
+### 하위 컴포넌트가 상위 컴포넌트에 이벤트를 사용
+  
+
+# 2021-09-08
+  
+
 
  
 
