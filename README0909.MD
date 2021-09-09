@@ -109,10 +109,10 @@ ReactDOM.render(
 
 ```
 
-1. <Welcome name="Sara" /> 엘리먼트로 ReactDOM.render()를 호출
-2. React는 {name: 'Sara'}를 props로 하여 Welcome 컴포넌트를 호출
-3. Welcome 컴포넌트는 결과적으로 <h1>Hello, Sara</h1> 엘리먼트를 반환
-4. React DOM은 <h1>Hello, Sara</h1> 엘리먼트와 일치하도록 DOM 업데이트
+1. '<Welcome name="Sara" />' 엘리먼트로 ReactDOM.render()를 호출
+2. React는 '{name: 'Sara'}'를 props로 하여 Welcome 컴포넌트를 호출
+3. Welcome 컴포넌트는 결과적으로 '<h1>Hello, Sara</h1>' 엘리먼트를 반환
+4. React DOM은 '<h1>Hello, Sara</h1>' 엘리먼트와 일치하도록 DOM 업데이트
 
 
 - //기존 앱에 React를 통합하는 경우 작은 컴포넌트부터 시작해서 뷰 계층 상단으로 올라가면서 점진적으로 작업 해야 할 수도 있음.
