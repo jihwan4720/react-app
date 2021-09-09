@@ -332,8 +332,13 @@ ReactDOM.render(
 ### 제어 컴포넌트
 
 
+- select  xormdp  multiple 옵션을 허용하면 value 속성에 배열을 전달할 수 있다.
 
+```
+<select multiple={true} value={['B', 'C']}>
+```
 
+- 데이터를 변경할 수 있는 모든 방법에 대해 이벤트 핸들러를 작성하고 React 컴포넌트를 통해 모든 입력 상태를 연결한다.
 
 
 
