@@ -37,6 +37,7 @@ ReactDOM.render(
     element,
   document.getElementById('root')
 );
+```
 
 - 속성에 JavaScript 표현식을 삽입할 때 중괄호 주변에 따옴표(문자열 값에 사용) 또는 중괄호(표현식에 사용)중 하나만 사용 해야 한다.
 
