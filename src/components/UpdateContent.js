@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
 
-class CreateContent extends Component {
+class UpdateContent extends Component {
+    constructor(props){
+      super(props);
+      this.state = {
+        title: this.props.data.title
+      }
+    }
     render() {
-      console.log('Content render');
+      console.log(this.props.data);
+      console.log('UpdateContent render');
       return(
         <article>
-          <h2>create</h2>
+          <h2>update</h2>
           <form action="/create_process" methos="post" 
             onSubmit={function(e){
               e.preventDefault();
               
               this.props.onSubmit(e.target.title.value,e.target.desc.value);
             }.bind(this)}>
-            <p><input type="text" name="title" placeholder="title"></input></p>
+            <p><input type="text" name="title" placeholder="title" value={this.state.title}
+                onChange={function(e){
+                  this.setState({title:e.target.value});
+                }.bind(this)}></input></p>
             <p>
               <textarea name="desc" placeholder="description"></textarea>
             </p>
@@ -25,4 +35,4 @@ class CreateContent extends Component {
     }
   }
 
-  export default CreateContent;
+  export default UpdateContent;
