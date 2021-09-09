@@ -96,6 +96,7 @@ class Welcome extends React.Component {
 ### 컴포넌트 렌더링
 
 ```
+
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
@@ -105,6 +106,7 @@ ReactDOM.render(
   element,
   document.getElementById('root')
 );
+
 ```
 
 1. <Welcome name="Sara" /> 엘리먼트로 ReactDOM.render()를 호출
