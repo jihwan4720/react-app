@@ -123,9 +123,28 @@ bind의 두번째 인자는 function의 첫번째 매개변수의 값으로 넣�
 ### 하위 컴포넌트가 상위 컴포넌트에 이벤트를 사용
   
 
-# 2021-09-08
+# 2021-09-09
+ 
+## concat
+  
+배열에 값을 추가 시 concat을 이용하면 기존의 데이터에 추가하지 않고 새로 만든다.
+push는 원본의 데이터에 추가 하는 방식으로 추후에 성능 개선이 어려울 수 있다.
   
 
+##shouldComponentUpdate(newProps,newState)
 
- 
+render() 이전의 실행되는 함수로 return 값이 true면 render()가 호출되고 false면 render()는 호출되지 않는다
+  
+새롭게 바뀐 값과 이전 값의 접근이 가능하다.
+
+![image](https://user-images.githubusercontent.com/90030675/132604868-14a90316-1f8e-43a4-a625-876a0f5d0401.png)
+
+## immutable
+
+immutable로 객체를 선언하고 사용하게 되면 객체의 메모리 주소가 불변한다
+그로 인해 구조적인 공유를 할 수 있어 애플리케이션을 추론하기 쉬우며 메모리 사용량 감소
+  
+
+  
+
 
