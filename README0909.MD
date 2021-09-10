@@ -341,32 +341,47 @@ ReactDOM.render(
 - 데이터를 변경할 수 있는 모든 방법에 대해 이벤트 핸들러를 작성하고 React 컴포넌트를 통해 모든 입력 상태를 연결한다.
 
 
+## State 끌어올리기
+
+아래 주소 참조 (재정리 필요)
+
+```
+https://ko.reactjs.org/docs/lifting-state-up.html
+```
 
 
+## 합성 VS 상속
 
+### 컴포넌트에 컴포넌트 담기
 
+- 아래와 같은 방식으로 다른 컴포넌트에서 JSX를 중첩하여 임의의 자식을 전달할 수 있다.
 
+```
+function FancyBorder(props){
+  return (
+    <div className={'FancyBorder FancyBorder-' + props.color}>
+      {props.children}
+    </div>
+  );
+}
 
+function WelcomeDialog() {
+  return (
+    <FancyBorder color="blue">
+      <h1 className="Dialog-title">
+        Welcome
+      </h1>
+      <p className="Dialog-message">
+        aaaaaaaaaaaaaaaaaaaa
+      </p>
+    </FancyBorder>
+  );
+}
+```
 
+## 상속
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- 컴포넌트를 상속 계층 구조로 작성을 권장할만한 사례가 없었다. 컴포넌트는 원시 타입의 값,React 엘리먼트 혹은 함수 등 어떠한 props를 받을 수 있다.
+- UI가 아닌 기능을 여러 컴포넌트에서 재사용해야 한다면 별도의 javaScript 모듈로 분리하는 것이 좋다. 컴포넌트에서 해당 함수,객체,클래스 등을 import 하여 사용할 수 있다.
 
 
