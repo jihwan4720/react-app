@@ -8,6 +8,7 @@
 
 - 아래와 같은 구조를 비구조화 할당이라고 한다.
 
+
 ```
 const MyComponent = props => {
     const { name, children } = props;
