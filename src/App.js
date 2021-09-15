@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import Counter from './Counter';
-import MyComponent from './MyComponent';
-import Say from './Say';
+import React from 'react';
+import EventPratice from './EventPratice';
+
 
 const App = () => {
-  return <Say />
+  return <EventPratice />
 }
 
 
