@@ -36,3 +36,7 @@ const MyComponent = ({ name, children }) => {
 - 클래스형 컴포넌트에서의 state 초깃값은 객체 형태를 넣어 주어야 하지만 useState에서는 객체가 아니여도 괜찮다.
 
 
+# 2021-09-15
+
+- 메서드 바인딩은 생성자 메서드에서 하는 것이 정석이나 바벨의 transform-class-properties 문법을 사용하면 화살표 함수 형태로 메서드를 정의 p.132
+
