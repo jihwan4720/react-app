@@ -19,6 +19,7 @@ const MyComponent = props => {
     );
 };
 
+
 ```
 ```
 const MyComponent = ({ name, children }) => {
