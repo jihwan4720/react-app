@@ -18,6 +18,7 @@ const MyComponent = props => {
         </div>
     );
 };
+
 ```
 ```
 const MyComponent = ({ name, children }) => {
