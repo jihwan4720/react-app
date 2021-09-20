@@ -1,9 +1,15 @@
 import React from 'react';
-import EventPratice from './EventPratice';
+import { Component } from 'react';
+import LifeCycleSample from './LifeCycleSample';
 
 
-const App = () => {
-  return <EventPratice />
+class App extends Component {
+  render() {
+    return (
+      <LifeCycleSample />
+      
+    );
+  }
 }
 
 

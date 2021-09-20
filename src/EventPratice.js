@@ -2,21 +2,26 @@ import React, { useState } from "react";
 import { Component } from "react/cjs/react.production.min";
 
 const EventPratice = () => {
-    const [username, setUsername ] = useState('');
-    const [message, setMessage] = useState('');
-    const onChangeUsername = e => setUsername(e.target.value);
-    const onChangeMessage = e => setMessage(e.target.value);
+    const [form, setForm ] = useState({
+        username : '',
+        message : ''
+    })
+
+    const { username, message } = form;
+    const onChange = e => {
+        const nextForm = {
+            ...form,
+            [e.target.name] : e.target.value
+        };
+        setForm(nextForm);
+    };
+
     const onClick = () => {
         alert(username + ': ' + message);
-        setUsername('');
-        setMessage('');
-    }
-
-
-    const onkeyPress = e => {
-        if(e.key === 'Enter') {
-            onClick();
-        }
+        setForm({
+            username: '',
+            message: ''
+        });
     };
 
     return (
@@ -27,7 +32,7 @@ const EventPratice = () => {
                 name="username"
                 placeholder="사용자명"
                 value={username}
-                onChange={onChangeUsername}
+                onChange={onChange}
             />
             <input
                 type="text"
