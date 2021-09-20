@@ -60,3 +60,8 @@ const result = numbers.map(num => num * num);
 
 - render()안에서는 이벤트 설정이 아닌 곳에서 setState를 사용하면 안되며, DOM에 접근해서도 안된다. componentDidMount에서 처리해야 한다.
 
+- useReducer의 첫 번재 파라미터에는 리듀서 함수를, 두번째에는 해당 리듀서의 기본 값을 넣어줌 p.200
+
+```
+const [state,dispatch] = useReducer(reducer, {value : 0});
+```

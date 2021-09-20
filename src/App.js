@@ -1,15 +1,14 @@
 import React from 'react';
 import { Component } from 'react';
-import LifeCycleSample from './LifeCycleSample';
+import { useState } from 'react/cjs/react.development';
+import Info from './Info';
 
 
-class App extends Component {
-  render() {
-    return (
-      <LifeCycleSample />
-      
-    );
-  }
+const App = () => {
+  const [visible, setVisible ] = useState(false);
+  return (
+    <Info />
+  )
 }
 
 
