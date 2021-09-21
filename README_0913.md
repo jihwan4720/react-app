@@ -65,3 +65,6 @@ const result = numbers.map(num => num * num);
 ```
 const [state,dispatch] = useReducer(reducer, {value : 0});
 ```
+- useCallback의 첫 번째 파라미터는 생성하고 싶은 함수를, 두 번째 파라미터는 배열을 넣는다
+
+비어있는 배열을 넣으면 렌더링 될 때 만들었던 함수를 계속 재사용
