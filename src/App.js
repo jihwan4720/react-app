@@ -1,14 +1,10 @@
 import React from 'react';
 import { Component } from 'react';
-import { useState } from 'react/cjs/react.development';
-import StyledComponent from './StyledComponent';
 
 
 const App = () => {
   
-  return (
-    <StyledComponent />
-  )
+  return <div>Todo App을 만들자!</div>
 }
 
 
